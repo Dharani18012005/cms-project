@@ -55,6 +55,7 @@ import React, { useState } from 'react';
                     <div className="mb-6">
                         <label className="block mb-2 text-sm font-medium text-gray-700">State</label>
                         <input
+                        
                             type="text"
                             value={state}
                             onChange={e => setState(e.target.value)}
