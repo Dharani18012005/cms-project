@@ -5,7 +5,6 @@ import Developerspage from './pages/Developerspage'
 import './App.css'
 // import BasicLayouts from './layouts/BasicLayouts'
 import DashboardLayout from './layouts/DashboardLayout'
- 
 function App(){
   
 
