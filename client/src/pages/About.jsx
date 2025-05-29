@@ -1,9 +1,8 @@
 import React from 'react';
 
-function About() {
-    return (
-       <>
-       <div className="h-screen w-screen bg-purple-200 flex items-center justify-center">
+function about(props) {
+  return (
+    <div className="h-screen w-screen bg-purple-200 flex items-center justify-center">
       <div className="max-w-3xl p-8 bg-white rounded-lg shadow-md">
         <h1 className="text-3xl font-bold text-black mb-4">
           Tourism & Travel Guide Management
@@ -32,7 +31,7 @@ function About() {
         </div>
       </div>
     </div>
-       </>
-    );
+  );
 }
-export default About;
+
+export default about;
