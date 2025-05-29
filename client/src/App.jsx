@@ -1,6 +1,7 @@
 import { useState } from 'react'
 // import Signup from './pages/Signup'
 import Developerspage from './pages/Developerspage'
+
 import './App.css'
 
 function App() {
@@ -9,7 +10,6 @@ function App() {
     <>
     <Developerspage/>
     </>
-  )
 }
 
 export default App
