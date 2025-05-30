@@ -1,18 +1,16 @@
-import { useState } from 'react'
-// import Signup from './pages/Signup'
-import Developerspage from './pages/Developerspage'
+import './App.css';
+import { AuthProvider } from './context/AuthContext';
+import { StorageProvider } from './context/StorageContext';
+import AppRoutes from './routes/AppRoutes';
 
-import './App.css'
-// import BasicLayouts from './layouts/BasicLayouts'
-import DashboardLayout from './layouts/DashboardLayout'
-function App(){
-  
-
-  return (
-    <>
-    <Developerspage/>
-    </>
-  )
+function App() {
+	return (
+		<AuthProvider>
+			<StorageProvider>
+				<AppRoutes />
+			</StorageProvider>
+		</AuthProvider>
+	);
 }
 
 export default App;

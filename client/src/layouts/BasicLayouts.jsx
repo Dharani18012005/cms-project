@@ -1,9 +1,10 @@
 import React from 'react';
+import { Outlet } from 'react-router';
 
-function BasicLayouts(props) {
+function BasicLayouts() {
     return (
         <div>
-        
+    
             <header className="bg-purple-800 text-black p-6 shadow-md">
                 <div className="flex justify-end space-x-4">
                     <a
@@ -30,7 +31,7 @@ function BasicLayouts(props) {
                 <a href="/contact" className="hover:underline">Contact</a>
             </nav>
             <main className="max-w-5xl mx-auto p-6 bg-white rounded-lg shadow mt-6">
-                {props.children}
+                <Outlet/>
             </main>
             <footer className="bg-purple-800 text-black text-center py-4 mt-10">
                 &copy; {new Date().getFullYear()} Travel & Tourism Guide. All rights reserved.
