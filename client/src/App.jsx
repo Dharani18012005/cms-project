@@ -1,16 +1,13 @@
-import './App.css';
-import { AuthProvider } from './context/AuthContext';
-import { StorageProvider } from './context/StorageContext';
-import AppRoutes from './routes/AppRoutes';
+import React from 'react';
+import About from './pages/About.jsx'
+import './App.css'
 
-function App() {
-	return (
-		<AuthProvider>
-			<StorageProvider>
-				<AppRoutes />
-			</StorageProvider>
-		</AuthProvider>
-	);
+function App(props) {
+  return (
+    <div>
+      <About/>
+    </div>
+  );
 }
 
 export default App;
