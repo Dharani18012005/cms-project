@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import Touristplaces from '../mocks/Touristplaces'; // updated mock data file
+import Touristplaces from '../mocks/Touristplaces';
 import storageService from '../service/storageService';
 import AuthContext from './AuthContext';
 
