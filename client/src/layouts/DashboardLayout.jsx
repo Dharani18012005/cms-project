@@ -17,8 +17,11 @@ function DashboardLayout() {
             <nav className="flex flex-col space-y-4 w-64 bg-purple-100/80 shadow-lg py-10 px-4">
                 <h1 className="text-2xl font-bold mb-8 text-black text-center">DASHBOARD</h1>
 
-                <Link to="/about" className="px-4 py-2 rounded bg-purple-300 hover:bg-purple-400 text-black font-medium text-center transition">
+                <Link to="/dashboard/about" className="px-4 py-2 rounded bg-purple-300 hover:bg-purple-400 text-black font-medium text-center transition">
                     About
+                </Link>
+                <Link to ="/dashboard/developer" className="px-4 py-2 rounded bg-purple-300 hover:bg-purple-400 text-black font-medium text-center transition">
+                    Developerspage
                 </Link>
                 <Link to="/dashboard/tours" className="px-4 py-2 rounded bg-purple-300 hover:bg-purple-400 text-black font-medium text-center transition">
                     Tours

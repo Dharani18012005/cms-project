@@ -27,7 +27,7 @@ function BasicLayouts() {
                 <a href="/" className="hover:underline">Home</a>
                 <a href="/destinations" className="hover:underline">Destinations</a>
                 <a href="/guides" className="hover:underline">Guides</a>
-                <a href="/about" className="hover:underline">About</a>
+                {/* <a href="/about" className="hover:underline">About</a> */}
                 <a href="/contact" className="hover:underline">Contact</a>
             </nav>
             <main className="max-w-5xl mx-auto p-6 bg-white rounded-lg shadow mt-6">
