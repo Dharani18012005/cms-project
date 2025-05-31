@@ -11,6 +11,13 @@ function App() {
 			</StorageProvider>
 		</AuthProvider>
 	);
+    return (
+        <AuthProvider>
+            <StorageProvider>
+                <AppRoutes />
+            </StorageProvider>
+        </AuthProvider>
+    );
 }
 
 export default App;

@@ -15,6 +15,7 @@ function AuthProvider({ children }) {
 			userService.authenticate(email, password);
 			setIsAuth(true);
 			setUserEmail(email);
+			// Add login action to history
 			import('../service/historyService').then(({ default: historyService }) => {
 				historyService.addHistory(email, 'login');
 			});
