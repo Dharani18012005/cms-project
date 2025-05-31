@@ -1,71 +1,83 @@
-import { useState,useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import AuthContext from '../context/AuthContext';
+import React, { useState } from 'react';
 
- function Signup() {
+function Signup() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [state, setState] = useState('');
     const [country, setCountry] = useState('');
-    const navigate = useNavigate();
-    const{register}=useContext(AuthContext);
-    function handleSubmit (e)  {
+
+    const handleSubmit = (e) => {
         e.preventDefault();
-        register(email,password);
+        console.log({ username, email, password, state, country });
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="w-full max-w-md p-8 space-y-6 bg-white rounded shadow-md">
-                <h2 className="text-2xl font-bold text-center text-gray-800">Sign Up</h2>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <input
-                        type="text"
-                        placeholder="Username"
-                        value={username}
-                        onChange={e => setUsername(e.target.value)}
-                        required
-                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    />
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                        required
-                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    />
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                        required
-                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    />
-                    <input
-                        type="text"
-                        placeholder="State"
-                        value={state}
-                        onChange={e => setState(e.target.value)}
-                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    />
-                    <input
-                        type="text"
-                        placeholder="Country"
-                        value={country}
-                        onChange={e => setCountry(e.target.value)}
-                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    />
+        <div className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-200 flex flex-col">
+            <header className="w-full py-8 bg-white shadow-md">
+                <h2 className="text-3xl font-bold text-center text-blue-700">Sign Up</h2>
+            </header>
+            <main className="flex flex-1 items-center justify-center">
+                <form
+                    onSubmit={handleSubmit}
+                    className="w-full max-w-md bg-white rounded-lg shadow-lg p-8"
+                >
+                    <div className="mb-6">
+                        <label className="block mb-2 text-sm font-medium text-gray-700">Username</label>
+                        <input
+                            type="text"
+                            value={username}
+                            onChange={e => setUsername(e.target.value)}
+                            required
+                            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        />
+                    </div>
+                    <div className="mb-6">
+                        <label className="block mb-2 text-sm font-medium text-gray-700">Email</label>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                            required
+                            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        />
+                    </div>
+                    <div className="mb-6">
+                        <label className="block mb-2 text-sm font-medium text-gray-700">Password</label>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            required
+                            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        />
+                    </div>
+                    <div className="mb-6">
+                        <label className="block mb-2 text-sm font-medium text-gray-700">State</label>
+                        <input
+                            type="text"
+                            value={state}
+                            onChange={e => setState(e.target.value)}
+                            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        />
+                    </div>
+                    <div className="mb-8">
+                        <label className="block mb-2 text-sm font-medium text-gray-700">Country</label>
+                        <input
+                            type="text"
+                            value={country}
+                            onChange={e => setCountry(e.target.value)}
+                            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        />
+                    </div>
                     <button
                         type="submit"
-                        className="w-full py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                        className="w-full py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition"
                     >
                         Sign Up
                     </button>
                 </form>
-            </div>
+            </main>
         </div>
     );
 }
