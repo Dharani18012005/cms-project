@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import About from './pages/about'
+import React from 'react';
+import About from './pages/About.jsx'
 import './App.css'
 
-function App() {
-
+function App(props) {
   return (
-    <>
+    <div>
       <About/>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
