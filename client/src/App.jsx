@@ -4,6 +4,13 @@ import { StorageProvider } from './context/StorageContext';
 import AppRoutes from './routes/AppRoutes';
 
 function App() {
+	return (
+		<AuthProvider>
+			<StorageProvider>
+				<AppRoutes />
+			</StorageProvider>
+		</AuthProvider>
+	);
     return (
         <AuthProvider>
             <StorageProvider>
