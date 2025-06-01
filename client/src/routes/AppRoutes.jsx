@@ -5,7 +5,7 @@ import SignUp from "../pages/Signup";
 import BasicLayouts from "../layouts/BasicLayouts";
 import DashboardLayout from "../layouts/DashboardLayout";
 import Intro from "../pages/dashboard/Intro";
-import About from "../pages/About";
+import About from "../pages/dashboard/About";
 import Developerspage from "../pages/dashboard/Developerspage";
 import Tours from "../pages/dashboard/Tours";
 import Guides from "../pages/dashboard/Guides";
